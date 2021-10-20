@@ -9,9 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="137" Margin="397,10,0,0" Text="Transfer Credit Page" FontSize="80" TextWrapping="Wrap" VerticalAlignment="Top" Width="815"/>
-        <ListBox HorizontalAlignment="Left" Height="408" Margin="97,0,0,0" VerticalAlignment="Center" Width="562"/>
-        <TextBlock HorizontalAlignment="Left" Height="96" Margin="94,189,0,0" Text="Saved Accounts" TextWrapping="Wrap" VerticalAlignment="Top" Width="565" FontSize="70"/>
+        <TextBlock HorizontalAlignment="Left" Height="119" Margin="169,10,0,0" Text="Transfer Credit Page" FontSize="80" TextWrapping="Wrap" VerticalAlignment="Top" Width="815"/>
+        <ListBox HorizontalAlignment="Left" Name="ContactsListBox" Height="438" Margin="34,239,0,0" VerticalAlignment="Top" Width="562"/>
+        <TextBlock HorizontalAlignment="Left" Name="SavedAccountsText" Height="96" Margin="34,141,0,0" Text="Saved Accounts" TextWrapping="Wrap" VerticalAlignment="Top" Width="565" FontSize="70"/>
+        <TextBox HorizontalAlignment="Left" Name="AccountNumberTypeBox" Height="62" Margin="613,332,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="525" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Name="EnterAccountNumberText" Margin="609,141,0,0" Text="Enter Account Number" TextWrapping="Wrap" VerticalAlignment="Top" Height="183" Width="450" FontSize="70"/>
+        <TextBlock HorizontalAlignment="Left" Name="EnterAmountText" Margin="613,383,0,0" Text="Enter Amount" TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="445" FontSize="70"/>
+        <TextBox HorizontalAlignment="Left" Name="EnterAmountTypeBox" Margin="609,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="323" FontSize="40"/>
+        <Button Content="Confirm Transfer" Name="ConfirmTransferButton" FontSize="40" Margin="608,578,0,0" VerticalAlignment="Top" Height="99" Width="323" Click="ConfirmTransferButton_Click"/>
 
     </Grid>
 </Page>

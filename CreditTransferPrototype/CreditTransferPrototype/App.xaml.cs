@@ -23,8 +23,15 @@ namespace CreditTransferPrototype
     sealed partial class App : Application
     {
         internal static UserAccountClass currentUser;
-        internal static UserAccountClass User001 = new UserAccountClass(001, "DefaultAccount", "admin", 19586, 20.00f, 0213746852, "Default", "Admin", "User", "test@test.com");
-        internal static UserAccountClass User002 = new UserAccountClass(002, "John35", "admin", 37542, 600.52f, 347895347, "John", "Paul", "Jones", "John35@email.com");
+        internal static UserAccountClass recievingUser;
+
+        internal static UserAccountClass User001 = new UserAccountClass(001, "DefaultAccount", "admin", 20, 20.00f, 0213746852, "Default", "Admin", "User", "test@test.com");
+        internal static UserAccountClass User002 = new UserAccountClass(002, "John35", "admin", 21, 600.52f, 347895347, "John", "Paul", "Jones", "John35@email.com");
+
+        internal static List<UserAccountClass> AllUsers = new List<UserAccountClass>();
+
+
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -33,6 +40,8 @@ namespace CreditTransferPrototype
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+
         }
 
         /// <summary>

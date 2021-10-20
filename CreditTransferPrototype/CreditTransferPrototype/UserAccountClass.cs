@@ -46,6 +46,11 @@ namespace CreditTransferPrototype
             this.userLastName = null;
             this.userEmail = null;
         }
+
+        public void ChangeAccountCredit(int amount)
+        {
+            this.accountCredit += amount;
+        }
     }
 
 }

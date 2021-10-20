@@ -26,5 +26,66 @@ namespace CreditTransferPrototype
         {
             this.InitializeComponent();
         }
+
+        private void ConfirmTransferButton_Click(object sender, RoutedEventArgs e)
+        {
+            int GivenAccountNumber;
+            int GivenAmount;
+
+            
+
+            int test;
+
+            bool accountNumberSuccess = int.TryParse(AccountNumberTypeBox.Text, out GivenAccountNumber);
+            bool amountNumberSuccess = int.TryParse(EnterAmountTypeBox.Text, out GivenAmount);
+            if (accountNumberSuccess)
+            {
+                if(amountNumberSuccess)
+                {
+                    App.recievingUser = FindAccountNumber(GivenAccountNumber);
+
+                    App.currentUser.ChangeAccountCredit(-GivenAmount);
+                    App.recievingUser.ChangeAccountCredit(GivenAmount);
+                }
+                else
+                {
+                    //Error Message "Not a valid amount
+                    
+                    //ContentDialog dlg = new ContentDialog()
+                    //{
+                    //    Title = "My Content Dialog:",
+                    //    Content = "Operation completed!",
+                    //    CloseButtonText = "Ok"
+                    //};
+                }
+
+
+            }
+
+            else
+            {
+                //Error Message Not a valid account number
+
+                //ContentDialog dlg = new ContentDialog()
+                //{
+                //    Title = "My Content Dialog:",
+                //    Content = "Operation completed!",
+                //    CloseButtonText = "Ok"
+                //};
+            }
+
+
+
+
+
+        }
+
+        UserAccountClass FindAccountNumber(int accNumber)
+        {
+            var foundAccount = App.AllUsers.SingleOrDefault(UserAccountClass => UserAccountClass.accountNumber == accNumber);
+            return foundAccount;
+        }
     }
+
+
 }

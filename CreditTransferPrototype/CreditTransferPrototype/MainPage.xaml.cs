@@ -27,6 +27,9 @@ namespace CreditTransferPrototype
             
             this.InitializeComponent();
             App.currentUser = App.User001;
+            App.AllUsers.Add(App.User001);
+            App.AllUsers.Add(App.User002);
+
         }
 
         private void AccountDetailsButton_Click(object sender, RoutedEventArgs e)
