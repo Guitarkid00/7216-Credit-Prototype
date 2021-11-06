@@ -26,7 +26,7 @@ namespace CreditTransferPrototype
         internal static UserAccountClass recievingUser;
 
         internal static UserAccountClass User001 = new UserAccountClass(001, "DefaultAccount", "admin", 20, 20.00f, 0213746852, "Default", "Admin", "User", "test@test.com");
-        internal static UserAccountClass User002 = new UserAccountClass(002, "John35", "admin", 21, 600.52f, 347895347, "John", "Paul", "Jones", "John35@email.com");
+        internal static UserAccountClass User002 = new UserAccountClass(002, "John35", "admin", 21, 600.00f, 347895347, "John", "Paul", "Jones", "John35@email.com");
 
         internal static List<UserAccountClass> AllUsers = new List<UserAccountClass>();
 
